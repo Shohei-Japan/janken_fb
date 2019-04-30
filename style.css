@@ -1,0 +1,126 @@
+body {
+  background-color: #eee;
+}
+
+/* 入室画面 */
+#entry__container {
+  width: 12rem;
+  margin: 3rem auto 0;
+  padding: 2rem 3rem;
+  background-color: #fafafa;
+  text-align: center;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+#enterInput {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 0.3rem;
+}
+
+#errorMessage {
+  color: red;
+}
+
+/* じゃんけんとチャット画面 */
+#app__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#janken__container {
+  width: 100%;
+}
+
+#handsResult {
+  display: flex;
+  justify-content: space-around;
+}
+
+#jankenField {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 30rem;
+  width: 100%;
+  padding:2rem 0;
+}
+
+/* じゃんけんの選択ボタン */
+.hand {
+  color: #aaa;
+  background-color: #fafafa;
+  width: 7rem;
+  height: 7rem;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 7rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.hand:hover {
+  top: 5px;
+  background-color: #eee;
+  box-shadow: none;
+  transform: translate3d(0, 2px, 0);
+}
+
+#message__container {
+  height: 50vh;
+  width: 15rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+#messages {
+  overflow-y: scroll;
+}
+
+#messagesList {
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+.message {
+  padding: 0.1rem 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.mine {
+  border-radius: 0.7rem 0.7rem 0.7rem 0;
+  background: #3af;
+}
+
+.another {
+  border-radius: 0.7rem 0.7rem 0 0.7rem;
+  background: #3fa;
+}
+
+#messageInput {
+  width: 100%;
+}
+
+/* bottun, input のラベル */
+.label {
+  font-size: 12px;
+}
+
+.btn {
+  color: #666;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
+}

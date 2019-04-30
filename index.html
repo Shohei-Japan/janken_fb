@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="init()">
+  <!-- 入室前 (サインイン前) に表示。入室したら非表示。 -->
+  <div id="entry__container">
+    <button id="createRoom" class="btn" onclick="createRoom()">
+      新しい部屋を作る
+    </button>
+    <form id="enterRoom">
+      <label class="label" for="inputRoomNum">
+        部屋を指定して入室する
+      </label>
+      <div class="input__wrapper">
+        <input 
+          id="inputRoomNum" 
+          type="text" 
+          name="roomNumber" 
+          placeholder="入力して enter"
+        >
+        <p id="errorMessage"></p>
+      </div>
+    </form>  
+  </div>
+
+  <!-- 入室前に非表示。入室したら表示。 -->
+  <div id="app__container" class="hidden">
+    <!-- 部屋番号と退室ボタン -->
+    <span id="currentUserId"></span>
+    <span id="currentRoomNum"></span>
+    <button class="btn" onclick="authLogout()">退室する</button>
+
+    <!-- アプリエリア -->
+    <div id="app__wrapper">
+
+      <!-- じゃんけんサイド -->
+      <div id="janken__container">
+        <!-- じゃんけん表示欄 -->
+        <div id="janken">
+          <div id="handsResult">
+            <p id="myHandResult" class="hand_result"></p>
+            <p id="result"></p>
+            <p id="enemyHandResult" class="hand_result"></p>
+          </div>
+          <div id="jankenField"></div>
+        </div>
+      </div>
+
+      <div id="message__container">
+          <!-- メッセージ表示欄 -->
+          <div id="messages">
+            <ul id="messagesList"></ul>
+          </div>
+          <!-- メッセージ入力欄 -->
+          <form id="messageForm">
+              <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="your message..."
+              >
+            </form>
+          </div>
+
+    </div>
+  </div>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase-auth.js"></script>
+  <script src="fb.js"></script>
+  <script src="main.js"></script>
+  <script src="auth.js"></script>
+  <script src="message.js"></script>
+  <script src="hand.js"></script>
+</body>
+</html>
